@@ -1,6 +1,6 @@
 {
   "name": "tjb-webcomponent",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Dead Simple helper Class for creating HTMLElements (native WebComponents)",
   "main": "./docs/tjb-wc.min.js",
   "scripts": {
