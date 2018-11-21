@@ -37,7 +37,7 @@ export default class WebComponent extends HTMLElement {
    * Use handle<Name>Change(newValue, oldValue) {} to react to attribute changes
    * 
    * @example 
-   * static ATTR() { return ['status'] }
+   * static get observedAttributes() {} { return ['status'] }
    * // Will trigger following function on attribute change:
    * handleStatusChange(newValue, oldValue) {}
    * // And add:
