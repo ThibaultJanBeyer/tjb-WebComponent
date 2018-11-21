@@ -1,0 +1,32 @@
+{
+  "name": "tjb-webcomponent",
+  "version": "0.0.1",
+  "description": "Dead Simple helper Class for creating HTMLElements (native WebComponents)",
+  "main": "WebComponent.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build-regular | npm run build-minified",
+    "build-regular": "./node_modules/.bin/babel WebComponent.js --out-file docs/tjb-WebComponent.js",
+    "build-minified": "./node_modules/.bin/babel --minified WebComponent.js --out-file docs/tjb-wc.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThibaultJanBeyer/tjb-WebComponent.git"
+  },
+  "keywords": [
+    "webcomponent",
+    "htmlelements",
+    "javascript",
+    "class",
+    "helper"
+  ],
+  "author": "Thibault Jan Beyer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ThibaultJanBeyer/tjb-WebComponent/issues"
+  },
+  "homepage": "https://github.com/ThibaultJanBeyer/tjb-WebComponent#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0"
+  }
+}
