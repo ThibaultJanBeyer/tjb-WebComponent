@@ -1,6 +1,7 @@
 # tjb-webcomponent
 
-Dead Simple helper Class for creating HTMLElements (native WebComponents)
+Dead Simple helper Class for creating HTMLElements (native WebComponents).  
+_This is a heavily improved version of [@Tonis2](https://github.com/tonis2) [Kelbas](https://github.com/tonis2/kelbas)_
 
 ![gzip size](http://img.badgesize.io/https://thibaultjanbeyer.github.io/tjb-WebComponent/tjb-wc.min.js?compression=gzip)
 

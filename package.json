@@ -2,7 +2,7 @@
   "name": "tjb-webcomponent",
   "version": "0.0.1",
   "description": "Dead Simple helper Class for creating HTMLElements (native WebComponents)",
-  "main": "WebComponent.js",
+  "main": "./docs/tjb-wc.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run build-regular | npm run build-minified",
