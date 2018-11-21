@@ -9,7 +9,8 @@ Dead Simple helper Class for creating HTMLElements (native WebComponents)
 Take away amount of boilerplate to create:
 
 - ShadowDom combining CSS & HTML nodes
-- Add getters and setters to watched attributes
+- Add getters and setters to watched attributes:
+  So for each attribute `myClass.foo = 'bar'` will work the same as `myClass.setAttribute('foo', 'bar')`
 
 ## Add to project
 
@@ -84,13 +85,28 @@ class MyClass extends WebComponent {
   }
 
   handleColorChange(newValue, oldValue) {
-    this.domNode.classList.add(newValue);
+    this.domNode.className = newValue;
   }
 }
 
-customElements.define("colored-text", MyClass);
+customElements.define("my-class", MyClass);
 ```
 
-Now you can use it just as any other WebComponent:
+Now you can use it just as any other Web Component:
 
-@TODO: complete readme
+```html
+<my-class></my-class>
+```
+
+You would be able to change the color for instance like so:
+
+```JavaScript
+const node = document.querySelector('my-class'); // get the node if you don’t already have it
+node.color = 'blue'; // will call handleColorChange and add the class 'blue'
+// this is equivalent to node.setAttribute('color', 'blue')
+// or also <my-class color="blue"></my-class>
+```
+
+# Enjoy
+
+[![Typewriter Gif](https://thibaultjanbeyer.github.io/tjb-WebComponent/typewriter.gif)](http://thibaultjanbeyer.com/)
