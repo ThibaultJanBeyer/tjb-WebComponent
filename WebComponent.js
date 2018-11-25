@@ -21,7 +21,7 @@ export default class WebComponent extends HTMLElement {
 
   connectedCallback() {
     this._initialRendered = true;
-    this.render();
+    this._render();
   }
 
   _render() {
@@ -37,7 +37,7 @@ export default class WebComponent extends HTMLElement {
    */
   reRender() {
     if (!this._initialRendered) return "not yet initially rendered";
-    this.render();
+    this._render();
   }
 
   // Attribute Handling
