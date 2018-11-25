@@ -1,7 +1,6 @@
 # tjb-webcomponent
 
-Dead Simple helper Class for creating HTMLElements (native WebComponents).  
-_This is a heavily improved version of [@Tonis2](https://github.com/tonis2) [Kelbas](https://github.com/tonis2/kelbas)_
+Dead Simple helper Class for creating HTMLElements (native WebComponents).
 
 ![gzip size](http://img.badgesize.io/https://thibaultjanbeyer.github.io/tjb-WebComponent/tjb-wc.min.js?compression=gzip)
 
@@ -15,7 +14,15 @@ Take away amount of boilerplate to create:
 
 ## Add to project
 
+You might want to use a Polyfill for WebComponent:
+
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-lite.js"></script>
+```
+
 ### Include via HTML
+
+Include it:
 
 ```html
 <script
@@ -87,6 +94,11 @@ class MyClass extends WebComponent {
 
   handleColorChange(newValue, oldValue) {
     this.domNode.className = newValue;
+  }
+
+  connectedCallback() {
+    super.connectedCallback();
+    // do your own stuff
   }
 }
 
