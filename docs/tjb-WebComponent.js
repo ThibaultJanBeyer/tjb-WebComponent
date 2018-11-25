@@ -20,10 +20,24 @@ export default class WebComponent extends HTMLElement {
   HTML() {}
 
   connectedCallback() {
+    this._initialRendered = true;
+    this.render();
+  }
+
+  _render() {
+    this.shadowRoot.innerHTML = "";
     this.cssNode = this.CSS();
     this.domNode = this.HTML();
     if (this.cssNode) this.shadowRoot.appendChild(this.cssNode);
     if (this.domNode) this.shadowRoot.appendChild(this.domNode);
+  }
+
+  /**
+   * Redraw/Replace the whole component
+   */
+  reRender() {
+    if (!this._initialRendered) return "not yet initially rendered";
+    this.render();
   }
 
   // Attribute Handling
