@@ -2,7 +2,7 @@
 
 Dead Simple helper Class for creating HTMLElements (native WebComponents).
 
-![gzip size](http://img.badgesize.io/https://tjb-webcomponents.github.io/tjb-WebComponent/tjb-wc.min.js?compression=gzip)
+![gzip size](http://img.badgesize.io/https://tjb-webcomponents.github.io/tjb-webcomponent/tjb-wc.min.js?compression=gzip)
 
 ## Benefits
 
@@ -26,7 +26,7 @@ Include it:
 
 ```html
 <script
-  src="https://tjb-webcomponents.github.io/tjb-WebComponent/tjb-wc.min.js"
+  src="https://tjb-webcomponents.github.io/tjb-webcomponent/tjb-wc.min.js"
   type="module"
 ></script>
 ```
@@ -34,7 +34,7 @@ Include it:
 ### Include via JavaScript
 
 ```JavaScript
-import WebComponent from 'https://tjb-webcomponents.github.io/tjb-WebComponent/tjb-wc.min.js'
+import WebComponent from 'https://tjb-webcomponents.github.io/tjb-webcomponent/tjb-wc.min.js'
 ```
 
 ### Include via NPM
@@ -42,13 +42,13 @@ import WebComponent from 'https://tjb-webcomponents.github.io/tjb-WebComponent/t
 Console:
 
 ```bash
-npm i -S tjb-WebComponent
+npm i -S tjb-webcomponent
 ```
 
 Then in your code:
 
 ```JavaScript
-import WebComponent from 'tjb-WebComponent'
+import WebComponent from 'tjb-webcomponent'
 ```
 
 ## Useage
@@ -137,4 +137,4 @@ node.color = 'blue'; // will call handleColorChange and add the class 'blue'
 
 # Enjoy
 
-[![Typewriter Gif](https://thibaultjanbeyer.github.io/tjb-WebComponent/typewriter.gif)](http://thibaultjanbeyer.com/)
+[![Typewriter Gif](https://tjb-webcomponents.github.io/tjb-webcomponent/typewriter.gif)](http://thibaultjanbeyer.com/)
