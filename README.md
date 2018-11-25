@@ -2,7 +2,7 @@
 
 Dead Simple helper Class for creating HTMLElements (native WebComponents).
 
-![gzip size](http://img.badgesize.io/https://thibaultjanbeyer.github.io/tjb-WebComponent/tjb-wc.min.js?compression=gzip)
+![gzip size](http://img.badgesize.io/https://tjb-webcomponents.github.io/tjb-WebComponent/tjb-wc.min.js?compression=gzip)
 
 ## Benefits
 
@@ -26,7 +26,7 @@ Include it:
 
 ```html
 <script
-  src="https://thibaultjanbeyer.github.io/tjb-WebComponent/tjb-wc.min.js"
+  src="https://tjb-webcomponents.github.io/tjb-WebComponent/tjb-wc.min.js"
   type="module"
 ></script>
 ```
@@ -34,7 +34,7 @@ Include it:
 ### Include via JavaScript
 
 ```JavaScript
-import WebComponent from 'https://thibaultjanbeyer.github.io/tjb-WebComponent/tjb-wc.min.js'
+import WebComponent from 'https://tjb-webcomponents.github.io/tjb-WebComponent/tjb-wc.min.js'
 ```
 
 ### Include via NPM
