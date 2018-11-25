@@ -102,6 +102,9 @@ class MyClass extends WebComponent {
   }
 }
 
+// Useful methods:
+this.reRender()  // Redraw/Replace the whole component (only if it is connected)
+
 customElements.define("my-class", MyClass);
 ```
 
