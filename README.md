@@ -68,6 +68,9 @@ That’s it. You’re ready to use the WebComponent helper like so:
 ```JavaScript
 class MyClass extends WebComponent {
 
+  // CSS
+  ////////////////////////////////////////////////////////////
+
   CSS() {
     return html`
       <style>
@@ -82,11 +85,17 @@ class MyClass extends WebComponent {
     `;
   }
 
+  // Markup
+  ////////////////////////////////////////////////////////////
+
   HTML() {
     return html`
       <div class="orange">I’m an orange text</div>
     `;
   }
+
+  // Attribute Handling
+  ////////////////////////////////////////////////////////////
 
   static get observedAttributes() {
     return ['color']
@@ -95,6 +104,9 @@ class MyClass extends WebComponent {
   handleColorChange(newValue, oldValue) {
     this.domNode.className = newValue;
   }
+
+  // Logic
+  ////////////////////////////////////////////////////////////
 
   connectedCallback() {
     super.connectedCallback();
