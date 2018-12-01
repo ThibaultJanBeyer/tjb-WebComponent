@@ -92,4 +92,8 @@ export default ((WebComponent = HTMLElement) => class extends WebComponent {
     const capitalizedName = name.substring(0, 1).toUpperCase() + name.substring(1);
     this[`handle${capitalizedName}Change`] && this[`handle${capitalizedName}Change`](newValue, oldValue);
   }
+
+  dispatchEvent(name, data) {
+    return super.dispatchEvent(new CustomEvent(name, { data }));
+  }
 });

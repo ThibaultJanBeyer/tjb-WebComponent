@@ -98,4 +98,8 @@ class extends WebComponent {
     this[`handle${capitalizedName}Change`] &&
       this[`handle${capitalizedName}Change`](newValue, oldValue);
   }
+
+  dispatchEvent(name, data) {
+    return super.dispatchEvent(new CustomEvent(name, { data }));
+  }
 }
