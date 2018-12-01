@@ -85,7 +85,7 @@ class extends WebComponent {
             return this.setAttribute(attr, newValue);
 
           if (newValue)
-            return this.setAttribute(attr, '');
+            return this.setAttribute(attr, 'true');
           else
             return this.removeAttribute(attr);
         }

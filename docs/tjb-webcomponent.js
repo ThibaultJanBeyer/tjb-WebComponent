@@ -82,7 +82,7 @@ export default ((WebComponent = HTMLElement) => class extends WebComponent {
         set: function (newValue) {
           if (typeof newValue !== "boolean") return this.setAttribute(attr, newValue);
 
-          if (newValue) return this.setAttribute(attr, '');else return this.removeAttribute(attr);
+          if (newValue) return this.setAttribute(attr, 'true');else return this.removeAttribute(attr);
         }
       });
     });
