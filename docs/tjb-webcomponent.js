@@ -47,10 +47,10 @@ export default ((WebComponent = HTMLElement) => class extends WebComponent {
    * Return an array of attributes you want to observe
    * + This will automatically observe the attributes and
    * also add GETTERS and SETTERS for the attribute
-   * 
+   *
    * Use handle<Name>Change(newValue, oldValue) {} to react to attribute changes
-   * 
-   * @example 
+   *
+   * @example
    * static get observedAttributes() {} { return ['status'] }
    * // Will trigger following function on attribute change:
    * handleStatusChange(newValue, oldValue) {}
@@ -82,7 +82,7 @@ export default ((WebComponent = HTMLElement) => class extends WebComponent {
         set: function (newValue) {
           if (typeof newValue !== "boolean") return this.setAttribute(attr, newValue);
 
-          if (newValue) return this.setAttribute(attr, 'true');else return this.removeAttribute(attr);
+          if (newValue) return this.setAttribute(attr, "true");else return this.removeAttribute(attr);
         }
       });
     });
@@ -94,6 +94,8 @@ export default ((WebComponent = HTMLElement) => class extends WebComponent {
   }
 
   dispatchEvent(name, data) {
-    return super.dispatchEvent(new CustomEvent(name, { data }));
+    return super.dispatchEvent(new CustomEvent(name, {
+      detail: data
+    }));
   }
 });
