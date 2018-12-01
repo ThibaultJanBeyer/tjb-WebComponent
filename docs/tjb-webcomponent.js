@@ -1,4 +1,4 @@
-export default class WebComponent extends HTMLElement {
+export default ((WebComponent = HTMLElement) => class extends WebComponent {
   constructor() {
     super();
     this.attachShadow({
@@ -92,4 +92,4 @@ export default class WebComponent extends HTMLElement {
     const capitalizedName = name.substring(0, 1).toUpperCase() + name.substring(1);
     this[`handle${capitalizedName}Change`] && this[`handle${capitalizedName}Change`](newValue, oldValue);
   }
-}
+});

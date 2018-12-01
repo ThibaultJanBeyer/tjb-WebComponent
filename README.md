@@ -56,17 +56,32 @@ import WebComponent from 'tjb-webcomponent'
 When defining your WebComponent, instead of extending `HTMLElement` just extend `WebComponent` like so:
 
 ```JavaScript
-class MyClass extends WebComponent {
+class MyClass extends WebComponent() {
   // do something here
 }
 ```
 
 That’s it. You’re ready to use the WebComponent helper like so:
 
+- Mixin with a specific custom element:
+
+```JavaScript
+class MyClass extends WebComponent(HTMLInputElement) {
+  // do something here
+}
+
+customElements.define("my-class", MyClass, { extends: 'input' });
+
+// <!-- can now be used like this -->
+<input is="my-class">
+```
+
+Keep in mind, that most native elements do not have a shadow dom, thus the rendering might not work.
+
 - With any html template tool
 
 ```JavaScript
-class MyClass extends WebComponent {
+class MyClass extends WebComponent() {
 
   // CSS
   ////////////////////////////////////////////////////////////

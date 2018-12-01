@@ -1,4 +1,5 @@
-export default class WebComponent extends HTMLElement {
+export default (WebComponent = HTMLElement) =>
+class extends WebComponent {
   constructor() {
     super();
     this.attachShadow({
